@@ -1,0 +1,5 @@
+name: TextReplacer
+main: cd9r.TextReplacer
+version: 1.0.0
+api: [1.0.0]
+author: cd9r

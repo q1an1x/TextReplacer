@@ -1,0 +1,4 @@
+# TextReplacer for Nukkit
+# Available variables: {PLAYER}
+
+"test-msg-{PLAYER}": "replaced-msg-{PLAYER}"
