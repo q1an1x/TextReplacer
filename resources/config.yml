@@ -1,6 +1,10 @@
 # TextReplacer for Nukkit
+# Simply change the texts or messages which is sent by the server or other plugins.
 # Available variables: {PLAYER}, {MONTH}, {DAY}, {HOUR}, {MINUTE}, {SECOND}
+# Format: "Text to be replaced": "Text you want"
 
-"test-msg-{PLAYER}": "replaced-msg-{PLAYER}"
+# Message on player joined.
+"{PLAYER} joined the game.": "Welcome {PLAYER} to the server!"
 
+# Message on time displaying.
 "Current Time: {MONTH}/{DAY} {HOUR}:{MINUTE}:{SECOND}": "Today: {MONTH}/{DAY}\nTime: {HOUR}:{MINUTE}:{SECOND}"
