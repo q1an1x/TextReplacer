@@ -1,4 +1,6 @@
 # TextReplacer for Nukkit
-# Available variables: {PLAYER}
+# Available variables: {PLAYER}, {MONTH}, {DAY}, {HOUR}, {MINUTE}, {SECOND}
 
 "test-msg-{PLAYER}": "replaced-msg-{PLAYER}"
+
+"Current Time: {MONTH}/{DAY} {HOUR}:{MINUTE}:{SECOND}": "Today: {MONTH}/{DAY}\nTime: {HOUR}:{MINUTE}:{SECOND}"

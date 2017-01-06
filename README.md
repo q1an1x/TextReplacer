@@ -7,3 +7,8 @@ Put it info your plugins folder.
 
 # Configure
 Edit ./plugins/TextReplacer/config.yml.
+
+# Available Variables
+Player Name: {PLAYER}
+
+Time: {YEAR}, {MONTH}, {DAY}, {HOUR}, {MINUTE}, {SECOND}

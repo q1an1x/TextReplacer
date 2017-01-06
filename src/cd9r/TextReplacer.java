@@ -12,6 +12,8 @@ import cn.nukkit.network.protocol.DataPacket;
 import cn.nukkit.network.protocol.TextPacket;
 import cn.nukkit.plugin.PluginBase;
 
+import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Map;
 
 public class TextReplacer extends PluginBase implements Listener {
@@ -42,11 +44,31 @@ public class TextReplacer extends PluginBase implements Listener {
         if(pk instanceof TextPacket) {
 
             String name = event.getPlayer().getName();
+            Calendar time = Calendar.getInstance();
+
+            HashMap<String, String> variables = new HashMap<String, String>() {
+                {
+                    put("{PLAYER}", name);
+                    put("{YEAR}", String.valueOf(time.get(Calendar.YEAR)));
+                    put("{MONTH}", String.valueOf(time.get(Calendar.MONTH)));
+                    put("{DAY}", String.valueOf(time.get(Calendar.DAY_OF_MONTH)));
+                    put("{HOUR}", String.valueOf(time.get(Calendar.HOUR)));
+                    put("{MINUTE}", String.valueOf(time.get(Calendar.MINUTE)));
+                    put("{SECOND}", String.valueOf(time.get(Calendar.SECOND)));
+                }
+            };
 
             for(Map.Entry<String, Object> entry : this.list.entrySet()) {
 
-                String search = entry.getKey().replace("{PLAYER}", name);
-                String replacement = entry.getValue().toString().replace("{PLAYER}", name);
+                String search = entry.getKey();
+                String replacement = entry.getValue().toString();
+
+                for(Map.Entry<String, String> variable : variables.entrySet()) {
+
+                    search = search.replace(variable.getKey(), variable.getValue());
+                    replacement = replacement.replace(variable.getKey(), variable.getValue());
+
+                }
 
                 ((TextPacket) pk).message = ((TextPacket) pk).message.replace(search, replacement);
 
