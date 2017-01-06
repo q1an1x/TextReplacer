@@ -50,9 +50,9 @@ public class TextReplacer extends PluginBase implements Listener {
                 {
                     put("{PLAYER}", name);
                     put("{YEAR}", String.valueOf(time.get(Calendar.YEAR)));
-                    put("{MONTH}", String.valueOf(time.get(Calendar.MONTH)));
+                    put("{MONTH}", String.valueOf(time.get(Calendar.MONTH) + 1));
                     put("{DAY}", String.valueOf(time.get(Calendar.DAY_OF_MONTH)));
-                    put("{HOUR}", String.valueOf(time.get(Calendar.HOUR)));
+                    put("{HOUR}", String.valueOf(time.get(Calendar.HOUR_OF_DAY)));
                     put("{MINUTE}", String.valueOf(time.get(Calendar.MINUTE)));
                     put("{SECOND}", String.valueOf(time.get(Calendar.SECOND)));
                 }
