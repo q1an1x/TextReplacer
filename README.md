@@ -6,7 +6,7 @@ Simply change the texts or messages which is sent by the server or other plugins
 # Usage
 Put it into your plugins folder.
 
-# Configure
+# Configuration
 Edit ./plugins/TextReplacer/config.yml.
 
 # Available Variables
