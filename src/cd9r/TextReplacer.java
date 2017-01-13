@@ -55,7 +55,7 @@ public class TextReplacer extends PluginBase implements Listener {
                     put("{HOUR}", String.valueOf(time.get(Calendar.HOUR_OF_DAY)));
                     put("{MINUTE}", String.valueOf(time.get(Calendar.MINUTE)));
                     put("{SECOND}", String.valueOf(time.get(Calendar.SECOND)));
-					put("{LEVEL}", event.getPlayer().getLevel().getName());
+		    put("{LEVEL}", event.getPlayer().getLevel().getName());
                 }
             };
 
