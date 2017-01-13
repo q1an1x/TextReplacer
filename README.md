@@ -13,3 +13,5 @@ Edit ./plugins/TextReplacer/config.yml.
 Player Name: {PLAYER}
 
 Time: {YEAR}, {MONTH}, {DAY}, {HOUR}, {MINUTE}, {SECOND}
+
+Level Name: {LEVEL}

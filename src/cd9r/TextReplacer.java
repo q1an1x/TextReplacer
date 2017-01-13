@@ -1,7 +1,7 @@
 package cd9r;
 
 /*
- * Changing the way we play MC:PE
+ * Make the world a better place.
  */
 
 import cn.nukkit.event.EventHandler;
@@ -55,6 +55,7 @@ public class TextReplacer extends PluginBase implements Listener {
                     put("{HOUR}", String.valueOf(time.get(Calendar.HOUR_OF_DAY)));
                     put("{MINUTE}", String.valueOf(time.get(Calendar.MINUTE)));
                     put("{SECOND}", String.valueOf(time.get(Calendar.SECOND)));
+					put("{LEVEL}", event.getPlayer().getLevel().getName());
                 }
             };
 
