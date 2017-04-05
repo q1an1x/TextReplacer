@@ -1,0 +1,7 @@
+# TextReplacer
+# Example:
+# "The message you want to replace": "The message you want to replace AS"
+# "将要被替换的消息": "替换内容"
+
+# Variables: {PLAYER}
+"Testing message": "Hello {PLAYER}, I've been replaced!"
