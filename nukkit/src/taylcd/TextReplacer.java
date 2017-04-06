@@ -8,6 +8,7 @@ import cn.nukkit.network.protocol.DataPacket;
 import cn.nukkit.network.protocol.TextPacket;
 import cn.nukkit.plugin.PluginBase;
 
+import java.io.File;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,6 +19,9 @@ public class TextReplacer extends PluginBase implements Listener {
 
     @Override
     public void onLoad() {
+
+        File file = new File(getDataFolder(), "");
+        if(!file.isDirectory()) if(!file.mkdir()) getLogger().notice("Unable to create data folder.");
 
         this.saveDefaultConfig();
         this.reloadConfig();
