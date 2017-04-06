@@ -7,11 +7,9 @@ Simply change the texts or messages which is sent by the server or other plugins
 Put it into your plugins folder.
 
 # Configuration
-Edit ./plugins/TextReplacer/config.yml.
+Check ./plugins/TextReplacer/config.yml.
 
 # Available Variables
 Player Name: {PLAYER}
-
-Time: {YEAR}, {MONTH}, {DAY}, {HOUR}, {MINUTE}, {SECOND}
 
 Level Name: {LEVEL}

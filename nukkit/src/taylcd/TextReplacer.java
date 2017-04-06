@@ -1,9 +1,5 @@
 package taylcd;
 
-/*
- * Make the world a better place.
- */
-
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.EventPriority;
 import cn.nukkit.event.Listener;
@@ -49,13 +45,7 @@ public class TextReplacer extends PluginBase implements Listener {
             HashMap<String, String> variables = new HashMap<String, String>() {
                 {
                     put("{PLAYER}", name);
-                    put("{YEAR}", String.valueOf(time.get(Calendar.YEAR)));
-                    put("{MONTH}", String.valueOf(time.get(Calendar.MONTH) + 1));
-                    put("{DAY}", String.valueOf(time.get(Calendar.DAY_OF_MONTH)));
-                    put("{HOUR}", String.valueOf(time.get(Calendar.HOUR_OF_DAY)));
-                    put("{MINUTE}", String.valueOf(time.get(Calendar.MINUTE)));
-                    put("{SECOND}", String.valueOf(time.get(Calendar.SECOND)));
-		    put("{LEVEL}", event.getPlayer().getLevel().getName());
+		            put("{LEVEL}", event.getPlayer().getLevel().getName());
                 }
             };
 
